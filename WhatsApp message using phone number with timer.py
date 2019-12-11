@@ -11,7 +11,7 @@ def time_check():
             return True
         
         
-phno=input("Enter the receiver's WhatsApp number")
+phno=input("Enter the receiver's WhatsApp number along with the country code ")
 message=input("Enter the message")
 hour=int(input("Enter the hour in 24-hour format to send message"))
 minute=int(input("Enter the minute to send message"))
@@ -19,18 +19,14 @@ second=int(input("Enter the second to send message"))
 number_of_bombings=int(input("Enter the number of times you want to bomb"))
 
 driver=webdriver.Chrome("D:/chromedriver")
-driver.get("https://wa.me/91"+phno)
+driver.get("https://wa.me/"+phno)
 time.sleep(5)
 
 open_whatsapp_position=py.locateOnScreen('D:\Thonny\OpenWhatsApp.png')
-py.click(open_whatsapp_position)
+py.click(open_whatsapp_position, duration=2)
 time.sleep(10)
-
-message_box_position=py.locateOnScreen('D:\Thonny\MessageBox.png')
-py.click(message_box_position)
-time.sleep(1)
 
 if time_check():
     for i in range(number_of_bombings):
-        py.typewrite(message,interval=0.05)
+        py.typewrite(message)
         py.press('enter')
