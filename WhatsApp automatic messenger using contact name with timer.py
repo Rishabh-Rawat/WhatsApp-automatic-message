@@ -22,9 +22,7 @@ time.sleep(10)
 chat_position=driver.find_element_by_css_selector("[title^="+name+"]")
 chat_position.click()
 
-message_box_position=py.locateOnScreen('D:\Thonny\MessageBox.png')
-py.click(message_box_position)
-time.sleep(1)
+
 
 py.typewrite(message,interval=0.05)
 if time_check():
