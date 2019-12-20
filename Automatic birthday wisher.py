@@ -18,7 +18,7 @@ def time_check():
         hour_now=time.localtime()[3]
         minute_now=time.localtime()[4]
         second_now=time.localtime()[5]
-        if hour_now==18 and minute_now==18 and second_now==0:
+        if hour_now==0 and minute_now==0 and second_now==0:
             return True
 
 def retrieve_from_table():
