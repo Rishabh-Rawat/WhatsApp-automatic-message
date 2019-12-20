@@ -24,7 +24,7 @@ time.sleep(1)
 driver.maximize_window()
 time.sleep(2)
 
-open_whatsapp_position=(1063,250)
+open_whatsapp_position=(1064,250)
 py.click(open_whatsapp_position)
 
 if time_check(hour,minute,second):
